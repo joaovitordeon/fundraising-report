@@ -139,7 +139,7 @@ if 'data' in st.session_state:
     st.text('\n')
     
     btn = st.button(f"Clique aqui para ver a mágina acontecer 🕵️‍♂️🪄✨")
-    if btn:
+    if btn and st.session_state['data'] is not None:
         switch_page("Métricas gerais")
         
 #------------------------------
