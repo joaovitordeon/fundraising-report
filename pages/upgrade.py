@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from streamlit_extras.switch_page_button import switch_page
-from app import load_data, load_info_sidebar, plot_title
+from app import load_info_sidebar, plot_title
 
 if 'data' not in st.session_state:
     st.info("🚨 Ops! Você ainda não fez o upload do arquivo na página 🏠Home")
