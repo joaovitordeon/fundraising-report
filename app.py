@@ -26,8 +26,6 @@ def plot_title():
 plot_title()
 
 #-----------------------------------
-st.session_state['data'] = None
-st.session_state['file_name'] = None
 
 @st.cache_data
 # function to read only csv files
