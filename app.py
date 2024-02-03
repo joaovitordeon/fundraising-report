@@ -26,12 +26,12 @@ def plot_title():
 plot_title()
 
 #-----------------------------------
-@st.cache_data
+st.session_state['data'] = None
+
 def load_data():
     return st.session_state['data']
 
 # function to read only csv files
-@st.cache_data
 def get_csv(uploaded_file):
     try:
         df = pd.read_csv(uploaded_file, sep=';')
