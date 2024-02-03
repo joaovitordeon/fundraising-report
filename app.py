@@ -122,13 +122,6 @@ grid = st.columns([1,1])
 uploaded_file = st.file_uploader(label=":black[**Faça o upload de um arquivo CSV**]", type=(["csv"]), accept_multiple_files=False, label_visibility='visible')
 
 if uploaded_file is not None:
-    # reset session states when user choose to select other file 
-    try:
-        del st.session_state['file_name']
-        del st.session_state['data']
-    except:
-        pass
-    
     # try to get data
     try:
         data = get_data(uploaded_file)
