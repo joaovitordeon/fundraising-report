@@ -27,6 +27,7 @@ plot_title()
 
 #-----------------------------------
 st.session_state['data'] = None
+st.session_state['file_name'] = None
 
 def load_data():
     return st.session_state['data']
