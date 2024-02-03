@@ -137,10 +137,12 @@ if uploaded_file is not None:
 if 'data' in st.session_state:
     st.text(f"Arquivo atualmente selecionado: {st.session_state['file_name']}")
     st.text('\n')
-    
-    btn = st.button(f"Clique aqui para ver a mágina acontecer 🕵️‍♂️🪄✨")
-    if btn and st.session_state['data'] is not None:
-        switch_page("Métricas gerais")
+
+    # only show magic button if data is a correct loaded csv
+    if st.session_state['data'] is not None:
+        btn = st.button(f"Clique aqui para ver a mágina acontecer 🕵️‍♂️🪄✨")
+        if btn:
+            switch_page("Métricas gerais")
         
 #------------------------------
 load_info_sidebar()
