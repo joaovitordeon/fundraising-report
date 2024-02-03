@@ -18,18 +18,17 @@ show_pages(
     ]
 )
 
-    # main configs
+def plot_title():
+    st.title("Fundraising Report 📈")
+    for i in range(2):
+        st.text("\n")
+
 plot_title()
 
 #-----------------------------------
 @st.cache_data
 def load_data():
     return st.session_state['data']
-
-def plot_title():
-    st.title("Fundraising Report 📈")
-    for i in range(2):
-        st.text("\n")
 
 # function to read only csv files
 @st.cache_data
