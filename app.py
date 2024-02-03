@@ -89,7 +89,7 @@ def main():
     
     show_pages(
         [   
-            #Page("app.py", "Home", "🏠"),
+            Page("app.py", "Home", "🏠"),
             Page("pages/general_metrics.py", "Métricas gerais", "📊"),
             Page("pages/growth.py", "Crescimento", "📈"),
             Page("pages/time_between_d.py", "Tempo entre doações", "⏱️"),
