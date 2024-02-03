@@ -1,0 +1,8 @@
+[theme]
+base="dark"
+primaryColor="#4bfcff"
+
+
+[server]
+maxUploadSize=2056
+enableXsrfProtection = false
