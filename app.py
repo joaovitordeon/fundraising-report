@@ -29,9 +29,7 @@ plot_title()
 st.session_state['data'] = None
 st.session_state['file_name'] = None
 
-def load_data():
-    return st.session_state['data']
-
+@st.cache_data
 # function to read only csv files
 def get_csv(uploaded_file):
     try:
@@ -43,6 +41,7 @@ def get_csv(uploaded_file):
             df = None
 
     return df
+
 
 @st.cache_data
 def get_data(uploaded_file):
