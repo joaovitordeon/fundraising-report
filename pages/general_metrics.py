@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from datetime import datetime
 from streamlit_extras.switch_page_button import switch_page
-from app import load_data, load_info_sidebar, plot_title
+from app import load_info_sidebar, plot_title
 
 
 def formatar_reais(valor):
@@ -15,7 +15,7 @@ else:
     plot_title()
 
     #load dataset
-    df = load_data()
+    df = st.session_state['data']
 
     # ------------------------------------------------- BIG NUMBERS ----------------------------------------------------------------
     grid = st.columns([3, 3, 3, 3])
